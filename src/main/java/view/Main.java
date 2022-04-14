@@ -44,7 +44,7 @@ public class Main extends JFrame{
 
         JButton student = new JButton("STUDENT");
         student.setBounds(100, 300, 300, 50);
-        student.setBackground(new Color(0, 0, 102));
+        student.setBackground(new Color(255, 255, 255));
         student.setForeground(Color.BLACK);
         student.setFont(new Font("Tahoma", Font.PLAIN, 20));
         student.setMargin(new Insets(0, 0, 0, 30));
@@ -52,7 +52,7 @@ public class Main extends JFrame{
 
         JButton admin = new JButton("TEACHER");
         admin.setBounds(560, 300, 300, 50);
-        admin.setBackground(new Color(0, 0, 102));
+        admin.setBackground(new Color(255, 255, 255));
         admin.setForeground(Color.BLACK);
         admin.setFont(new Font("Tahoma", Font.PLAIN, 20));
         admin.setMargin(new Insets(0, 0, 0, 30));
@@ -61,7 +61,7 @@ public class Main extends JFrame{
 
         JButton bookKeeper = new JButton("LIBRARIAN");
         bookKeeper.setBounds(1050, 300, 300, 50);
-        bookKeeper.setBackground(new Color(0, 0, 102));
+        bookKeeper.setBackground(new Color(255, 255, 255));
         bookKeeper.setForeground(Color.BLACK);
         bookKeeper.setFont(new Font("Tahoma", Font.PLAIN, 20));
         bookKeeper.setMargin(new Insets(0, 0, 0, 30));

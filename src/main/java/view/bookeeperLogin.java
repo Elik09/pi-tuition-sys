@@ -1,6 +1,6 @@
 package main.java.view;
 
-import main.java.view.dashboard.MainFrame;
+import main.java.view.dashboard.bookDash;
 
 import javax.swing.*;
 import java.awt.*;
@@ -52,7 +52,7 @@ public class bookeeperLogin extends JPanel implements ActionListener {
         if (passValue.equals("test1234")) {  //if authentic, navigate user to a new page
 
             //create instance of the NewPage
-            MainFrame page = new MainFrame();
+            bookDash page = new bookDash();
 
             //make page visible to the user
             page.setVisible(true);

@@ -39,7 +39,7 @@ public class MainFrame extends JFrame{
 
         JButton registerStudent = new JButton("Register Student");
         registerStudent.setBounds(0, 0, 300, 50);
-        registerStudent.setBackground(new Color(0, 0, 102));
+        registerStudent.setBackground(new Color(255, 255, 255));
         registerStudent.setForeground(Color.BLACK);
         registerStudent.setFont(new Font("Tahoma", Font.PLAIN, 20));
         registerStudent.setMargin(new Insets(0, 0, 0, 30));
@@ -47,7 +47,7 @@ public class MainFrame extends JFrame{
 
         JButton registeredStudent = new JButton("View Students");
         registeredStudent.setBounds(0, 50, 300, 50);
-        registeredStudent.setBackground(new Color(0, 0, 102));
+        registeredStudent.setBackground(new Color(255, 255, 255));
         registeredStudent.setForeground(Color.BLACK);
         registeredStudent.setFont(new Font("Tahoma", Font.PLAIN, 20));
         registeredStudent.setMargin(new Insets(0, 0, 0, 30));
@@ -55,7 +55,7 @@ public class MainFrame extends JFrame{
 
         JButton bookCourses = new JButton("Book Courses");
         bookCourses.setBounds(0, 100, 300, 50);
-        bookCourses.setBackground(new Color(0, 0, 102));
+        bookCourses.setBackground(new Color(255, 255, 255));
         bookCourses.setForeground(Color.BLACK);
         bookCourses.setFont(new Font("Tahoma", Font.PLAIN, 20));
         bookCourses.setMargin(new Insets(0, 0, 0, 30));
@@ -63,7 +63,7 @@ public class MainFrame extends JFrame{
 
         JButton viewBookedCourses = new JButton("View Booked Courses");
         viewBookedCourses.setBounds(0, 150, 300, 50);
-        viewBookedCourses.setBackground(new Color(0, 0, 102));
+        viewBookedCourses.setBackground(new Color(255, 255, 255));
         bookCourses.setForeground(Color.BLACK);
         viewBookedCourses.setFont(new Font("Tahoma", Font.PLAIN, 20));
         viewBookedCourses.setMargin(new Insets(0, 0, 0, 30));
@@ -72,7 +72,7 @@ public class MainFrame extends JFrame{
 
         JButton changeCourses = new JButton("Change Booking");
         changeCourses.setBounds(0, 200, 300, 50);
-        changeCourses.setBackground(new Color(0, 0, 102));
+        changeCourses.setBackground(new Color(255, 255, 255));
         bookCourses.setForeground(Color.BLACK);
         changeCourses.setFont(new Font("Tahoma", Font.PLAIN, 20));
         changeCourses.setMargin(new Insets(0, 0, 0, 30));
@@ -80,7 +80,7 @@ public class MainFrame extends JFrame{
 
         JButton availableBooks = new JButton("View/Amend Books");
         availableBooks.setBounds(0, 250, 300, 50);
-        availableBooks.setBackground(new Color(0, 0, 102));
+        availableBooks.setBackground(new Color(255, 255, 255));
         bookCourses.setForeground(Color.BLACK);
         availableBooks.setFont(new Font("Tahoma", Font.PLAIN, 20));
         availableBooks.setMargin(new Insets(0, 0, 0, 30));
@@ -88,7 +88,7 @@ public class MainFrame extends JFrame{
 
         JButton courseRating = new JButton("Rate Lesson");
         courseRating.setBounds(0, 300, 300, 50);
-        courseRating.setBackground(new Color(0, 0, 102));
+        courseRating.setBackground(new Color(255, 255, 255));
         bookCourses.setForeground(Color.BLACK);
         courseRating.setFont(new Font("Tahoma", Font.PLAIN, 20));
         courseRating.setMargin(new Insets(0, 0, 0, 30));
@@ -96,7 +96,7 @@ public class MainFrame extends JFrame{
 
         JButton endLessonReport = new JButton("Reports");
         endLessonReport.setBounds(0, 350, 300, 50);
-        endLessonReport.setBackground(new Color(0, 0, 102));
+        endLessonReport.setBackground(new Color(255, 255, 255));
         bookCourses.setForeground(Color.BLACK);
         endLessonReport.setFont(new Font("Tahoma", Font.PLAIN, 20));
         endLessonReport.setMargin(new Insets(0, 0, 0, 30));
