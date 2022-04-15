@@ -4,7 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.FileWriter;
+import java.security.SecureRandom;
 
 
 public class RegisterForm extends JFrame implements ActionListener {
@@ -58,7 +60,7 @@ public class RegisterForm extends JFrame implements ActionListener {
     public RegisterForm() {
         setTitle("Registration Form");
         setBounds(300, 90, 900, 900);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setResizable(false);
         //sub.addActionListener(this);
         c = getContentPane();
@@ -185,14 +187,21 @@ public class RegisterForm extends JFrame implements ActionListener {
         {
             try
             {
-                 fw = new FileWriter("regdata.txt");
+                // UUID id = UUID.randomUUID();
+                 SecureRandom prng = SecureRandom.getInstance("SHA1PRNG");
+                 String randomNum = new Integer(prng.nextInt()).toString();
+                 File file = new File("regdata.txt");
+                 FileWriter fw = new FileWriter(file, true);
                  fw.write(name.getText() + " : "+tname.getText());
                  fw.write(mno.getText() + " : "+tmno.getText());
                  fw.write(gender.getText() + " : "+male.isSelected()+" : "+female.isSelected() );
                  fw.write(dob.getText() + " : "+date.getSelectedItem() + " : "+month.getSelectedItem()+ " : "+year.getSelectedItem());
                  fw.write(add.getText() + " : "+tadd.getText());
                  fw.close();
-                 JOptionPane.showMessageDialog(null, "Registration Successfully");
+                 JOptionPane.showMessageDialog(null, "Registration Successfully user ID: " + randomNum);
+                 studentLogin studentLogin = new studentLogin();
+                 setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
 
 
 
