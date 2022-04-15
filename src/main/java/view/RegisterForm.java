@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileWriter;
 
 
 public class RegisterForm extends JFrame implements ActionListener {
@@ -30,6 +31,7 @@ public class RegisterForm extends JFrame implements ActionListener {
     private JTextArea tout;
     private JLabel res;
     private JTextArea resadd;
+    private FileWriter fw;
 
     private String dates[]
             = { "1", "2", "3", "4", "5",
@@ -58,7 +60,7 @@ public class RegisterForm extends JFrame implements ActionListener {
         setBounds(300, 90, 900, 900);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
-
+        //sub.addActionListener(this);
         c = getContentPane();
         c.setLayout(null);
 
@@ -178,7 +180,27 @@ public class RegisterForm extends JFrame implements ActionListener {
 
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent ae) {
+        if(ae.getActionCommand()==sub.getActionCommand())
+        {
+            try
+            {
+                 fw = new FileWriter("regdata.txt");
+                 fw.write(name.getText() + " : "+tname.getText());
+                 fw.write(mno.getText() + " : "+tmno.getText());
+                 fw.write(gender.getText() + " : "+male.isSelected()+" : "+female.isSelected() );
+                 fw.write(dob.getText() + " : "+date.getSelectedItem() + " : "+month.getSelectedItem()+ " : "+year.getSelectedItem());
+                 fw.write(add.getText() + " : "+tadd.getText());
+                 fw.close();
+                 JOptionPane.showMessageDialog(null, "Registration Successfully");
+
+
+
+                 
+
+            }catch(Exception e) {JOptionPane.showMessageDialog(null, e+"");}
+
+        }
 
     }
 }
