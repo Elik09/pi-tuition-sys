@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class studentLogin extends JFrame implements ActionListener {
 
      JButton btnLogin;
@@ -63,7 +64,16 @@ final     JTextField txtUserId;
 
         btnLogin.addActionListener(this);
         reg.addActionListener(this);
+
+        reg.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                new RegisterForm();
+            }
+        });
+
     }
+
+
 
 
     @Override
