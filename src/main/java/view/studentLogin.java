@@ -12,7 +12,6 @@ public class studentLogin extends JFrame implements ActionListener {
      JButton reg;
      JLabel heading;
      JLabel heading2;
-     JPanel jPanel1;
 final     JTextField txtUserId;
 
     JPasswordField pass;
