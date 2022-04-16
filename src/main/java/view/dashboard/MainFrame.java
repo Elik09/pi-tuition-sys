@@ -1,7 +1,11 @@
 package main.java.view.dashboard;
 
+import main.java.view.controls.studentLogins;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame{
     public static JPanel mainContainer;
@@ -31,11 +35,16 @@ public class MainFrame extends JFrame{
         p1.add(heading);
 
         JPanel p3 = new JPanel();
-        JLabel AirlineManagementSystem = new JLabel("PI Booking System");
-        AirlineManagementSystem.setForeground(Color.BLACK);
-        AirlineManagementSystem.setFont(new Font("Tahoma", Font.PLAIN, 46));
-        AirlineManagementSystem.setBounds(600, 60, 1000, 85);
-        p3.add(AirlineManagementSystem);
+        p3.setLayout(null);
+        p3.setBackground(new Color(255, 255, 255));
+        p3.setBounds(300, 65, 1500, 900);
+        add(p3);
+
+        JLabel heading1 = new JLabel("Welcome To PI Lesson Booking");
+        heading1.setBounds(200, 20, 600, 40);
+        heading1.setForeground(Color.BLACK);
+        heading1.setFont(new Font("Tahoma", Font.BOLD, 30));
+        p3.add(heading1);
 
 
         JPanel p2 = new JPanel();
@@ -111,7 +120,21 @@ public class MainFrame extends JFrame{
 
 
         setVisible(true);
+
+
+        registerStudent.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+              studentLogins login =  new studentLogins();
+              login.setVisible(true);
+
+            }
+        });
+
+
     }
+
+
+
 
         }
 
