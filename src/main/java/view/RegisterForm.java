@@ -200,6 +200,7 @@ public class RegisterForm extends JFrame implements ActionListener {
                  fw.close();
                  JOptionPane.showMessageDialog(null, "Registration Successfully user ID: " + randomNum);
                  studentLogin studentLogin = new studentLogin();
+                // studentLogin.randomNum.setText();
                  setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
 

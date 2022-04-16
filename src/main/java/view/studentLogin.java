@@ -1,5 +1,7 @@
 package main.java.view;
 
+import main.java.view.dashboard.studentDash;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,12 +10,12 @@ import java.awt.event.ActionListener;
 
 public class studentLogin extends JFrame implements ActionListener {
 
-     JButton btnLogin;
-     JButton btnRegister;
-     JButton reg;
-     JLabel heading;
-     JLabel heading2;
-final     JTextField txtUserId;
+    JButton btnLogin;
+    JButton btnRegister;
+    JButton reg;
+    JLabel heading;
+    JLabel heading2;
+    final JTextField txtUserId;
 
     JPasswordField pass;
 
@@ -52,7 +54,6 @@ final     JTextField txtUserId;
         btnRegister.setBounds(410, 430, 250, 60);
 
 
-
         f.add(heading2);
         f.add(heading);
         f.add(txtUserId);
@@ -71,17 +72,39 @@ final     JTextField txtUserId;
             }
         });
 
-    }
+        btnLogin.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae)     //pass action listener as a parameter
+            {
+                String passValue = txtUserId.getText();        //get user entered password from the tf
+
+                //check whether the credentials are authentic or not
+                if (passValue.equals("test1234")) {  //if authentic, navigate user to a new page
+
+                    //create instance of the NewPage
+                    studentDash page = new studentDash();
+
+                    //make page visible to the user
+                    page.setVisible(true);
+
+                    //create a welcome label and set it to the new page
+                    //  JLabel wel_label = new JLabel("Welcome: ");
+                    // page.getContentPane().add(wel_label);
+                } else {
+                    //show error message
+                    JOptionPane.showMessageDialog( null, "Please enter valid user ID");
+                }
+
+            }
+        });
 
 
 
-
+        }
     @Override
     public void actionPerformed(ActionEvent e) {
 
     }
 }
-
 
 
 
