@@ -30,6 +30,13 @@ public class MainFrame extends JFrame{
         heading.setFont(new Font("Tahoma", Font.BOLD, 30));
         p1.add(heading);
 
+        JPanel p3 = new JPanel();
+        JLabel AirlineManagementSystem = new JLabel("PI Booking System");
+        AirlineManagementSystem.setForeground(Color.BLACK);
+        AirlineManagementSystem.setFont(new Font("Tahoma", Font.PLAIN, 46));
+        AirlineManagementSystem.setBounds(600, 60, 1000, 85);
+        p3.add(AirlineManagementSystem);
+
 
         JPanel p2 = new JPanel();
         p2.setLayout(null);
